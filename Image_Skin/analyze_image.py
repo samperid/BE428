@@ -12,8 +12,8 @@ width,height = imag.size
 pixel_array = np.zeros(((width,height))
 
 #Get RGB
-for row in pixel_array:
-    for column in pixel_array:
+for row in range(width):
+    for column in range(height):
         pixelRGB = imag.getpixel((row,column))
         R,G,B = pixelRGB
         # RGB_vec = [R,G,B]
