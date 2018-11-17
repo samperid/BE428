@@ -14,16 +14,18 @@ for x in range(width):
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
         R,G,B = pixelRGB 
+        pixel_matrix(x,y) = [R,G,B]
         # print(R)
         # print(G)
         # print(B)
 
-#coordinates of the pixel
-X,Y = 0,0
-#Get RGB
-pixelRGB = imag.getpixel((X,Y))
-R,G,B = pixelRGB 
+print(pixel_matrix)
+# #coordinates of the pixel
+# X,Y = 0,0
+# #Get RGB
+# pixelRGB = imag.getpixel((X,Y))
+# R,G,B = pixelRGB 
 
-print(R)
-print(G)
-print(B)
+# print(R)
+# print(G)
+# print(B)
