@@ -9,12 +9,12 @@ width,height = imag.size
 pixel_array = np.zeros(((width,height))
 
 #Convert the image te RGB if it is a .gif for example
-imag = imag.convert ('RGB')
+imag2 = imag.convert('RGB')
 
 #Get RGB
 for row in pixel_array:
     for column in pixel_array:
-        pixelRGB = imag.getpixel((row,column))
+        pixelRGB = imag2.getpixel((row,column))
         R,G,B = pixelRGB
         # RGB_vec = [R,G,B]
         # pixel_array(row,column) = RGB_vec
