@@ -15,7 +15,9 @@ imag = imag.convert ('RGB')
 for row in pixel_array:
     for column in pixel_array:
         pixelRGB = imag.getpixel((row,column))
-        pixel_array(row,column) = pixelRGB
+        R,G,B = pixelRGB
+        RGB_vec = [R,G,B]
+        pixel_array(row,column) = RGB_vec
         #R,G,B = pixelRGB 
 
 print(pixel_array)
