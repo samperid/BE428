@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a408818dec840ceb7a3d1fe0f9d66285e1567d31fc153cf87e0f9653f39ee865"
+            "sha256": "4653396586569e99cff76a4671dd3cea4ff0dc96c45700aad6edad015712bfca"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,31 @@
         ]
     },
     "default": {
+        "adafruit-blinka": {
+            "hashes": [
+                "sha256:e09bcdc9a332a2574e3d53c2b5100c7e5256e4f7ebdc251a1ec7080fd12fe19b"
+            ],
+            "version": "==0.2.7"
+        },
+        "adafruit-circuitpython-neopixel": {
+            "hashes": [
+                "sha256:30a02c309e8ef851395e6aa75987062d8919e10a9a51c25ac3b266f6f64ddb61"
+            ],
+            "index": "pypi",
+            "version": "==3.3.4"
+        },
+        "adafruit-gpio": {
+            "hashes": [
+                "sha256:d6465b92c866c51ca8f3bc1e8f2ec36f5ccdb46d0fd54101c1109756d4a2dcd0"
+            ],
+            "version": "==1.0.3"
+        },
+        "adafruit-pureio": {
+            "hashes": [
+                "sha256:e65cd929f1d8e109513ed1e457c2742bf4f15349c1a9b7f5b1e04191624d7488"
+            ],
+            "version": "==0.2.3"
+        },
         "certifi": {
             "hashes": [
                 "sha256:339dc09518b07e2fa7eda5450740925974815557727d6bd35d319c1524a04a4c",

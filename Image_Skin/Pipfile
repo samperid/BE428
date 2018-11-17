@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 requests = "*"
 circuitpython-build-tools = "*"
+adafruit-circuitpython-neopixel = "*"
 
 [dev-packages]
 
