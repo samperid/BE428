@@ -9,6 +9,7 @@ circuitpython-build-tools = "*"
 adafruit-circuitpython-neopixel = "*"
 board = "*"
 numpy = "*"
+image = "*"
 
 [dev-packages]
 
