@@ -9,17 +9,17 @@ imag = imag.convert ('RGB')
 width,height = imag.size
 
 pixel_matrix = np.empty((width,height))
-
+print(pixel_matrix)
 for x in range(width):
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
         R,G,B = pixelRGB 
-        print(type(R))
+        
         # print(R)
         # print(G)
         # print(B)
 
-print(pixel_matrix)
+
 # #coordinates of the pixel
 # X,Y = 0,0
 # #Get RGB
