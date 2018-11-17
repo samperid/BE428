@@ -32,7 +32,7 @@ for x in range(width):
 
 for x in range(width):
     for y in range(height):
-        print("Pixel %i,%i:" % x,y)
+        print("Pixel %i,%i:" % (x,y))
         print("\n")
         print("Red = %i " % pixel_dict[x][y].red)
         print("\n")
