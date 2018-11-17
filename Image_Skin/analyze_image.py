@@ -14,7 +14,8 @@ for x in range(width):
         pixelRGB = imag.getpixel((x,y))
         R,G,B = pixelRGB 
         RGB_list = [R,G,B]
-        print(RGB_list)
+        pixel_matrix(x,y) = RGB_list
+        #print(RGB_list)
         # print(R)
         # print(G)
         # print(B)
