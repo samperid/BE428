@@ -1,16 +1,21 @@
 import Image
 import numpy as np
 
-imag = Image.open("/home/pi/Desktop//BE428/Image_Skin/Images/")
-
-#Convert the image te RGB if it is a .gif for example
-imag = imag.convert ('RGB')
+imag = Image.open("/home/pi/Desktop//BE428/Image_Skin/Images/test0.jpg")
 
 #Get size of image
 width,height = imag.size
 
 pixel_array = np.zeros(width,height)
 
+#Convert the image te RGB if it is a .gif for example
+imag = imag.convert ('RGB')
+
 #Get RGB
-pixelRGB = imag.getpixel((X,Y))
-R,G,B = pixelRGB 
+for row in pixel_array:
+    for column in pixel_array:
+        pixelRGB = imag.getpixel((row,column))
+        pixel_array(row,column) = pixelRGB
+        #R,G,B = pixelRGB 
+
+print(pixel_array)
