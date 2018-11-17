@@ -1,7 +1,7 @@
 from PIL import *
 import numpy as np
 
-imag = Image.open("/home/pi/Desktop//BE428/Image_Skin/Images/test0.jpg")
+imag = Image.open("/home/pi/Desktop/BE428/Image_Skin/Images/test0.jpg")
 
 #Get size of image
 width,height = imag.size
