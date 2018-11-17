@@ -1,4 +1,3 @@
-import board
 import neopixel
 
-pixels = neopixel.NeoPixel(board.D5, 12)
+pixels = neopixel.NeoPixel(D5, 12)
