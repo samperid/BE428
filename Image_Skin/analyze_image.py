@@ -19,23 +19,21 @@ width,height = imag.size
 pixel_dict = {}
 
 for x in range(width):
+    #Each key in dictionary is a list which stores pix_color instance for every column
     pixel_dict[x] = []
     for y in range(height):
         #Get each pixel from image
         pixelRGB = imag.getpixel((x,y))
         #Get specific RGB value from pixel
         R,G,B = pixelRGB 
-        #
+        #Append 
         pixel_dict[x].append(pix_color(R,G,B))
-        #print(RGB_list)
-        # print(R)
-        # print(G)
-        # print(B)
+
 for x in range(width):
     for y in range(height):
-        print(pixel_dict[x].y.red)
-        print(pixel_dict[x].y.green)
-        print(pixel_dict[x].y.blue)
+        print(pixel_dict[x][y].red)
+        print(pixel_dict[x][y].green)
+        print(pixel_dict[x][y].blue)
 
 # #coordinates of the pixel
 # X,Y = 0,0
