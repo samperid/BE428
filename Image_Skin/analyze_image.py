@@ -10,6 +10,8 @@ width,height = imag.size
 
 pixel_matrix = np.empty(((width,height))
 
+print(pixel_matrix)
+
 for x in range(width):
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
