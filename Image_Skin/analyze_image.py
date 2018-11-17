@@ -14,12 +14,14 @@ imag = imag.convert ('RGB')
 #Get image size
 width,height = imag.size
 
-pixel_matrix = np.empty([width,height])
+pixel_dict = {}
+
 for x in range(width):
+    pixel_dict[x] = []
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
         R,G,B = pixelRGB 
-        pixel_matrix(x,y) = pix_color(R,G,B)
+        pixel_dict[x].append(pix_color(R,G,B))
         #print(RGB_list)
         # print(R)
         # print(G)
