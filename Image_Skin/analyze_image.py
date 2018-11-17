@@ -8,11 +8,7 @@ imag = imag.convert ('RGB')
 #Get image size
 width,height = imag.size
 
-print(type(width))
-# arr_width = int(width)
-# arr_height = int(height)
-
-# pixel_array = np.zeros(((arr_width,arr_height))
+pixel_matrix = np.empty(((width,height))
 
 for x in range(width):
     for y in range(height):
