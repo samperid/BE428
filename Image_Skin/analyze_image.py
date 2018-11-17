@@ -8,7 +8,8 @@ imag = imag.convert('RGB')
 
 #Get size of image
 width,height = imag.size
-
+print(width)
+print(height)
 pixel_array = np.zeros(((width,height))
 
 #Get RGB
