@@ -8,6 +8,7 @@ imag = imag.convert ('RGB')
 #Get image size
 width,height = imag.size
 
+print(type(width))
 # arr_width = int(width)
 # arr_height = int(height)
 
