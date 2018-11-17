@@ -26,7 +26,7 @@ for x in range(width):
         # print(R)
         # print(G)
         # print(B)
-print(pixel_matrix)
+print(pixel_dict)
 
 # #coordinates of the pixel
 # X,Y = 0,0
