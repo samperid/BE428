@@ -8,6 +8,7 @@ requests = "*"
 circuitpython-build-tools = "*"
 adafruit-circuitpython-neopixel = "*"
 board = "*"
+numpy = "*"
 
 [dev-packages]
 
