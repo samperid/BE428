@@ -4,5 +4,8 @@ from time import sleep
 camera = PiCamera()
 
 camera.start_preview()
-sleep(10000)
+for i in range(5):
+    sleep(5)
+    camera.capture('/home/pi/Desktop//BE428/Image_Skin/Images/image%s.jpg' % i)
 camera.stop_preview()
+
