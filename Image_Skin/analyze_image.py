@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+#Pixel color object which will store RGB Value
 class pix_color:
     def __init__(self,red,green,blue):
         self.red = red
@@ -14,19 +15,27 @@ imag = imag.convert ('RGB')
 #Get image size
 width,height = imag.size
 
+#Pixel dictionary will store pixel color instance
 pixel_dict = {}
 
 for x in range(width):
     pixel_dict[x] = []
     for y in range(height):
+        #Get each pixel from image
         pixelRGB = imag.getpixel((x,y))
+        #Get specific RGB value from pixel
         R,G,B = pixelRGB 
+        #
         pixel_dict[x].append(pix_color(R,G,B))
         #print(RGB_list)
         # print(R)
         # print(G)
         # print(B)
-print(pixel_dict)
+for x in range(width):
+    for y in range(height):
+        print(pixel_dict[x].y.red)
+        print(pixel_dict[x].y.green)
+        print(pixel_dict[x].y.blue)
 
 # #coordinates of the pixel
 # X,Y = 0,0
