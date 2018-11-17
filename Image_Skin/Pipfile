@@ -10,6 +10,7 @@ adafruit-circuitpython-neopixel = "*"
 board = "*"
 numpy = "*"
 image = "*"
+pillow = "*"
 
 [dev-packages]
 
