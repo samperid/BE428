@@ -14,7 +14,7 @@ for x in range(width):
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
         R,G,B = pixelRGB 
-        pixel_matrix(x,y) = [R,G,B]
+        pixel_matrix(x,y) = np.array([R,G,B])
         # print(R)
         # print(G)
         # print(B)
