@@ -8,7 +8,8 @@ imag = imag.convert ('RGB')
 #Get image size
 width,height = imag.size
 
-pixel_matrix = np.empty((width,height))
+pixel_matrix = [[0]*width]*height
+
 for x in range(width):
     for y in range(height):
         pixelRGB = imag.getpixel((x,y))
