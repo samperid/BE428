@@ -7,6 +7,7 @@ class pix_color:
         self.red = red
         self.green = green
         self.blue = blue
+        self.brightness = sum([red,green,blue])/3
 
 imag = imag = Image.open("/home/pi/Desktop/BE428/Image_Skin/Images/test0.jpg")
 #Convert the image te RGB if it is a .gif for example
@@ -31,9 +32,15 @@ for x in range(width):
 
 for x in range(width):
     for y in range(height):
-        print(pixel_dict[x][y].red)
-        print(pixel_dict[x][y].green)
-        print(pixel_dict[x][y].blue)
+        print("Pixel %i,%i:" % x,y)
+        print("\n")
+        print("Red = %i " % pixel_dict[x][y].red)
+        print("\n")
+        print("Green = %i " % pixel_dict[x][y].green)
+        print("\n")
+        print("Blue = %i " % pixel_dict[x][y].blue)
+        print("\n")
+        print("\n")
 
 # #coordinates of the pixel
 # X,Y = 0,0
