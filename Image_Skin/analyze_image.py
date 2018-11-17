@@ -27,9 +27,10 @@ for x in range(width):
         pixelRGB = imag.getpixel((x,y))
         #Get specific RGB value from pixel
         R,G,B = pixelRGB 
-        #Append 
+        #Append pix_color instance to list 
         pixel_dict[x].append(pix_color(R,G,B))
 
+#Print outputs
 for x in range(width):
     for y in range(height):
         print("Pixel %i,%i:" % (x,y))
@@ -41,13 +42,3 @@ for x in range(width):
         print("Blue = %i " % pixel_dict[x][y].blue)
         print("\n")
         print("\n")
-
-# #coordinates of the pixel
-# X,Y = 0,0
-# #Get RGB
-# pixelRGB = imag.getpixel((X,Y))
-# R,G,B = pixelRGB 
-
-# print(R)
-# print(G)
-# print(B)
