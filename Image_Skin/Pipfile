@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+circuitpython-build-tools = "*"
 
 [dev-packages]
 
