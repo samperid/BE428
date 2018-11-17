@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 class pix_color:
-    def __init__(red,green,blue):
+    def __init__(self,red,green,blue):
         self.red = red
         self.green = green
         self.blue = blue
