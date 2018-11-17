@@ -19,6 +19,7 @@ strip.begin()
 
 for i in range(36):
     wait_ms = 50
-    strip.setPixelColor(i, Color(255, 255, 0))
+    #strip.setPixelColor(i, Color(255, 255, 255))
+    strip.GRB= (1, 0, 2)
     strip.show()
     time.sleep(wait_ms/1000.0)
