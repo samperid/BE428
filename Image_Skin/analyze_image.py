@@ -31,3 +31,7 @@ X,Y = 0,0
 #Get RGB
 pixelRGB = imag.getpixel((X,Y))
 R,G,B = pixelRGB 
+
+print(R)
+print(G)
+print(B)
