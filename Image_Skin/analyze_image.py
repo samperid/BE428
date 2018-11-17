@@ -1,4 +1,4 @@
-from PIL import *
+from PIL import Image
 import numpy as np
 
 imag = Image.open("/home/pi/Desktop/BE428/Image_Skin/Images/test0.jpg")
