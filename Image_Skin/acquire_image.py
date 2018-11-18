@@ -7,7 +7,7 @@ name = raw_input("Insert name for images: ")
 
 camera.start_preview()
 for i in range(1):
-    sleep(10)
+    sleep(15)
     #num = str(i)
     #full_str = name+num
     full_str = name
