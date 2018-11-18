@@ -6,8 +6,8 @@ camera = PiCamera()
 name = raw_input("Insert name for images: ")
 
 camera.start_preview()
-for i in range(2):
-    sleep(5)
+for i in range(3):
+    sleep(8)
     num = str(i)
     full_str = name+num
     camera.capture('/home/pi/Desktop//BE428/Image_Skin/Images/%s.jpg' % full_str)
