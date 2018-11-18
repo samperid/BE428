@@ -38,7 +38,7 @@ for x in range(width):
     for y in range(height):
         total_R = total_R + pixel_dict[x][y].red
         total_G = total_G + pixel_dict[x][y].green
-        total_B = total_R + pixel_dict[x][y].blue
+        total_B = total_B + pixel_dict[x][y].blue
         '''
         print("Pixel %i,%i:" % (x,y))
         print("\n")
