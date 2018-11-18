@@ -9,7 +9,7 @@ class pix_color:
         self.blue = blue
         self.brightness = sum([red,green,blue])/3
 
-imag = imag = Image.open("/home/pi/Desktop/BE428/Image_Skin/Images/DR3_G.jpg")
+imag = imag = Image.open("/home/pi/Desktop/BE428/Image_Skin/Images/DR3_B.jpg")
 #Convert the image te RGB if it is a .gif for example
 imag = imag.convert ('RGB')
 
@@ -57,7 +57,7 @@ avg_G = total_G / (width*height)
 avg_B = total_B / (width*height)
 avg_bright = total_bright / (width*height)
 print("\n")
-print("Image File: DR3_G")
+print("Image File: DR3_B")
 print("avg_R = %f" % avg_R)
 print("avg_G = %f" % avg_G)
 print("avg_B = %f" % avg_B)
