@@ -20,10 +20,10 @@ strip.begin()
 for i in range(16):
     wait_ms = 50
     #Color(255,0,0) = Blue & Color(0,0,255) = Green
-    if i % 2 == 0 and i % 4 != 0:
-        strip.setPixelColor(i, Color(0, 0, 255))
-        strip.show()
-        time.sleep(wait_ms/1000.0)
-    # strip.setPixelColor(i,Color(255,255,255))
-    # strip.show()
-    # time.sleep(wait_ms/1000.0)
+    # if i % 2 == 0 and i % 4 != 0:
+    #     strip.setPixelColor(i, Color(0, 0, 255))
+    #     strip.show()
+    #     time.sleep(wait_ms/1000.0)
+    strip.setPixelColor(i,Color(255,0,0))
+    strip.show()
+    time.sleep(wait_ms/1000.0)
