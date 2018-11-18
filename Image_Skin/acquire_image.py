@@ -6,7 +6,7 @@ camera = PiCamera()
 name = raw_input("Insert name for images: ")
 
 camera.start_preview()
-for i in range(2):
+for i in range(0):
     sleep(5)
     num = str(i)
     full_str = name+num
