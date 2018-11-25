@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "20811dd7f324ce175e4e6375221eb89fc8d579f133130beff91ae96c7adbd9c7"
+            "sha256": "775f00f91b172223524c7a79e41fd62ab077532f3dc02bd63016e7fbf568c931"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -20,6 +20,7 @@
             "hashes": [
                 "sha256:157f1b7b924f7a1135ad0e87065ab653157598921a460633e17d07fb58436059"
             ],
+            "index": "pypi",
             "version": "==0.3.0"
         },
         "adafruit-circuitpython-busdevice": {
