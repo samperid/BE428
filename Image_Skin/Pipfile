@@ -10,6 +10,7 @@ adafruit-circuitpython-neopixel = "*"
 board = "*"
 numpy = "*"
 pillow = "*"
+"adafruit-circuitpython-tsl2561" = "*"
 
 [dev-packages]
 

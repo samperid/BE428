@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8403f63758c3ad3cfd9c6524c031dafa7748b83aa759f498e16777f014a07bd4"
+            "sha256": "20811dd7f324ce175e4e6375221eb89fc8d579f133130beff91ae96c7adbd9c7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,9 +18,15 @@
     "default": {
         "adafruit-blinka": {
             "hashes": [
-                "sha256:e09bcdc9a332a2574e3d53c2b5100c7e5256e4f7ebdc251a1ec7080fd12fe19b"
+                "sha256:157f1b7b924f7a1135ad0e87065ab653157598921a460633e17d07fb58436059"
             ],
-            "version": "==0.2.7"
+            "version": "==0.3.0"
+        },
+        "adafruit-circuitpython-busdevice": {
+            "hashes": [
+                "sha256:72b04e13934a84058417da33cec7866eca428acb968d37dd6cee48fe163dc260"
+            ],
+            "version": "==2.2.7"
         },
         "adafruit-circuitpython-neopixel": {
             "hashes": [
@@ -28,6 +34,13 @@
             ],
             "index": "pypi",
             "version": "==3.3.4"
+        },
+        "adafruit-circuitpython-tsl2561": {
+            "hashes": [
+                "sha256:b792880e2187f5d64a7e18eafbb4b873216d0e727d93c7660921febf56c79ec7"
+            ],
+            "index": "pypi",
+            "version": "==3.1.2"
         },
         "adafruit-gpio": {
             "hashes": [
