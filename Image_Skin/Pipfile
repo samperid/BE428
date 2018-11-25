@@ -11,7 +11,11 @@ board = "*"
 numpy = "*"
 pillow = "*"
 "adafruit-circuitpython-tsl2561" = "*"
+<<<<<<< HEAD
 rpi-gpio = "*"
+=======
+adafruit-blinka = "*"
+>>>>>>> a06a2e95ec98eff86ee2840ee45e38f2d6c6213c
 
 [dev-packages]
 
