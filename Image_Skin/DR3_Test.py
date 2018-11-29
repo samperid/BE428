@@ -55,10 +55,11 @@ ch0 = data[1] * 256 + data[0]
 ch1 = data1[1] * 256 + data1[0]
 
 # Output data to screen
-print("Green")
+print("Green Light")
 print("Full Spectrum(IR + Visible) :%d lux" %ch0)
 print("Infrared Value :%d lux" %ch1)
 print("Visible Value :%d lux" %(ch0 - ch1))
+print("\n")
 
 time.sleep(5)
 
@@ -98,10 +99,11 @@ ch0 = data[1] * 256 + data[0]
 ch1 = data1[1] * 256 + data1[0]
 
 # Output data to screen
-print("Red")
+print("Red Light")
 print("Full Spectrum(IR + Visible) :%d lux" %ch0)
 print("Infrared Value :%d lux" %ch1)
 print("Visible Value :%d lux" %(ch0 - ch1))
+print("\n")
 
 time.sleep(5)
 
@@ -141,10 +143,11 @@ ch0 = data[1] * 256 + data[0]
 ch1 = data1[1] * 256 + data1[0]
 
 # Output data to screen
-print("Blue")
+print("Blue Light")
 print("Full Spectrum(IR + Visible) :%d lux" %ch0)
 print("Infrared Value :%d lux" %ch1)
 print("Visible Value :%d lux" %(ch0 - ch1))
+print("\n")
 
 time.sleep(5)
 
