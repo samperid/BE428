@@ -26,6 +26,7 @@ for i in range(12):
 
 time.sleep(5)
 
+#Red
 for i in range(12):
     wait_ms = 50
     strip.setPixelColor(i,Color(0,255,0))
@@ -34,6 +35,7 @@ for i in range(12):
 
 time.sleep(5)
 
+#Blue
 for i in range(12):
     wait_ms = 50
     strip.setPixelColor(i,Color(0,0,255))
