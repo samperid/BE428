@@ -55,6 +55,7 @@ ch0 = data[1] * 256 + data[0]
 ch1 = data1[1] * 256 + data1[0]
 
 # Output data to screen
+print("\n")
 print("Green Light")
 print("Full Spectrum(IR + Visible) :%d lux" %ch0)
 print("Infrared Value :%d lux" %ch1)
