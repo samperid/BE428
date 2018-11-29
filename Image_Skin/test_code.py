@@ -27,3 +27,7 @@ for i in range(16):
     strip.setPixelColor(i,Color(255,0,0))
     strip.show()
     time.sleep(wait_ms/1000.0)
+
+time.sleep(5)
+
+strip.setPixelColor(i,Color(0,0,0))
