@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+circuitpython-build-tools = "*"
+adafruit-circuitpython-neopixel = "*"
+board = "*"
+numpy = "*"
+pillow = "*"
+"adafruit-circuitpython-tsl2561" = "*"
+<<<<<<< HEAD
+rpi-gpio = "*"
+=======
+adafruit-blinka = "*"
+>>>>>>> a06a2e95ec98eff86ee2840ee45e38f2d6c6213c
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
