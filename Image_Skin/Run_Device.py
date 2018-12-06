@@ -3,6 +3,7 @@ from neopixel import *
 import argparse
 import smbus
 import time
+import numpy as np
 from plotly import plotly
 import plotly.graph_objs as go
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
@@ -65,12 +66,112 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
     B *= 255
     return (int(R), int(G), int(B))
 
+
 # Create NeoPixel object with appropriate configuration.
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
 # Intialize the library (must be called once before other functions).
 strip.begin()
 
-user = input("Do ")
+#Prompt user input
+user = input("Please Insert File Name: ")
+check = input("When device placed over skin insert 'R' to begin")
+
+if check == 'R':
+
+    #Assign array of 15 for wavelength values, and for corresponding intensities 
+    wavelengths = np.zeros(16)
+    Full_Spectrum = np.zeros(16)
+    Infared_Value = np.zeros(16)
+    Visible_Value = np.zeros(16)
+
+    for i in range(16):
+        add = i * 20
+        wavelengths[i] = 400 + add 
+    
+    #Iterate through each wavelength
+    counter = 0
+    for l in wavelengths:
+        #Calculate R,G,B Concentration for Wavlength 
+        R,G,B = wavelength_to_rgb(l)
+        for i in range(12):
+            wait_ms = 50
+            strip.setPixelColor(i,Color(R,G,B))
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+        
+        # Get I2C bus
+        bus = smbus.SMBus(1)
+
+        # TSL2561 address, 0x39(57)
+        # Select control register, 0x00(00) with command register, 0x80(128)
+        #		0x03(03)	Power ON mode
+        bus.write_byte_data(0x39, 0x00 | 0x80, 0x03)
+        # TSL2561 address, 0x39(57)
+        # Select timing register, 0x01(01) with command register, 0x80(128)
+        #		0x02(02)	Nominal integration time = 402ms
+        bus.write_byte_data(0x39, 0x01 | 0x80, 0x02)
+
+        time.sleep(0.5)
+
+        # Read data back from 0x0C(12) with command register, 0x80(128), 2 bytes
+        # ch0 LSB, ch0 MSB
+        data = bus.read_i2c_block_data(0x39, 0x0C | 0x80, 2)
+
+        # Read data back from 0x0E(14) with command register, 0x80(128), 2 bytes
+        # ch1 LSB, ch1 MSB
+        data1 = bus.read_i2c_block_data(0x39, 0x0E | 0x80, 2)
+
+        # Convert the data
+        ch0 = data[1] * 256 + data[0]
+        ch1 = data1[1] * 256 + data1[0]
+
+        #Store intensity values in corresponding arrays
+        Full_Spectrum[counter] = ch0
+        Infared_Value[counter] = ch1
+        Visible_Value = ch0-ch1
+
+        #Increment counter
+        counter = counter + 1
+    
+    #Create Trace for Each Spectrum 
+    trace_FS = go.Scatter{
+        x = wavelengths,
+        y = Full_Spectrum,
+        mode = 'lines+markers',
+        name = 'Full Spectrum'
+    }
+
+    trace_IV = go.Scatter{
+        x = wavelengths,
+        y = Infared_Value,
+        mode = 'lines+markers',
+        name = 'Infrared Value'
+    }
+
+    trace_VS = go.Scatter{
+        x = wavelengths,
+        y = Visible_Value,
+        mode = 'lines+markers',
+        name = 'Full Spectrum'
+    }
+
+    data = [trace_FS,trace_IV,trace_VS]
+    
+    layout = go.Layout(
+        title='Imaging Results',
+        xaxis=dict(
+            title='Wavelength (nm)'
+        ),
+        yaxis=dict(
+            title='Light Intensity (lux)'
+        )
+    )
+
+    fig = go.Figure(data=data, layout=layout)
+    plot(fig, filename='Graphs/%s.html' % user)
+
+else:
+    print("Error Aborting Reading")
 
 #Plotting Function
 '''

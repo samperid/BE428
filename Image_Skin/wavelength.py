@@ -1,3 +1,8 @@
+import numpy as np
+from plotly import plotly
+import plotly.graph_objs as go
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+
 def wavelength_to_rgb(wavelength, gamma=0.8):
 
     '''This converts a given wavelength of light to an 
@@ -45,6 +50,8 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
     B *= 255
     return (int(R), int(G), int(B))
 
+
+'''
 wavelength = input("Insert Wavelength Value: ")
 
 R,G,B = wavelength_to_rgb(wavelength)
@@ -52,3 +59,18 @@ R,G,B = wavelength_to_rgb(wavelength)
 print("R: %i \n" % R)
 print("G: %i \n" % G)
 print("B: %i \n" % B)
+'''
+wavelengths = np.zeros(16)
+
+for i in range(16):
+    add = i * 20
+    wavelengths[i] = 400 + add
+
+print(wavelengths)
+
+for value in wavelengths:
+    print(value)
+    R,G,B = wavelength_to_rgb(value)
+    print("R: %i \n" % R)
+    print("G: %i \n" % G)
+    print("B: %i \n" % B)
