@@ -98,7 +98,7 @@ if check == "R":
         R,G,B = wavelength_to_rgb(l)
         for i in range(12):
             wait_ms = 50
-            strip.setPixelColor(i,Color(R,G,B))
+            strip.setPixelColor(i,Color(G,R,B))
             strip.show()
             time.sleep(wait_ms/1000.0)
         
