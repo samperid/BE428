@@ -76,8 +76,8 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 #Prompt user input
-#user = input("Please Insert File Name: ")
-check = raw_input("When device placed over skin insert 'R' to begin")
+user = raw_input("Please Insert File Name: ")
+check = raw_input("When device placed over skin insert 'R' to begin: ")
 
 if check == "R":
 
@@ -136,12 +136,14 @@ if check == "R":
         #Increment counter
         counter = counter + 1
     
+    '''
     print("Full Spectrum")
     print(Full_Spectrum)
     print("Infared Value")
     print(Infared_Value)
     print("Visible Value")
     print(Visible_Value)
+    '''
 
     for i in range(12):
         wait_ms = 50
@@ -149,7 +151,7 @@ if check == "R":
         strip.show()
         time.sleep(wait_ms/1000.0)
 
-    '''
+    
     #Create Trace for Each Spectrum 
     trace_FS = go.Scatter(
         x = wavelengths,
@@ -186,7 +188,7 @@ if check == "R":
 
     fig = go.Figure(data=data, layout=layout)
     plot(fig, filename='Graphs/%s.html' % user)
-'''
+
 else:
     print("Error Aborting Reading")
 
