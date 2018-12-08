@@ -77,7 +77,7 @@ strip.begin()
 
 #Prompt user input
 #user = input("Please Insert File Name: ")
-check = input("When device placed over skin insert 'R' to begin")
+check = raw_input("When device placed over skin insert 'R' to begin")
 
 if check == "R":
 
