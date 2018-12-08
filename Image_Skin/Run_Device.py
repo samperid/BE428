@@ -5,11 +5,10 @@ import argparse
 import smbus
 import time
 import numpy as np
-'''
 from plotly import plotly
 import plotly.graph_objs as go
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-'''
+
 
 # LED strip configuration:
 LED_COUNT      = 16      # Number of LED pixels.
