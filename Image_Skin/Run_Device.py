@@ -131,7 +131,7 @@ if check == "R":
         #Store intensity values in corresponding arrays
         Full_Spectrum[counter] = ch0
         Infared_Value[counter] = ch1
-        Visible_Value = ch0-ch1
+        Visible_Value[counter] = ch0-ch1
 
         #Increment counter
         counter = counter + 1
@@ -142,6 +142,13 @@ if check == "R":
     print(Infared_Value)
     print("Visible Value")
     print(Visible_Value)
+
+    for i in range(12):
+        wait_ms = 50
+        strip.setPixelColor(i,Color(0,0,0))
+        strip.show()
+        time.sleep(wait_ms/1000.0)
+
     '''
     #Create Trace for Each Spectrum 
     trace_FS = go.Scatter(
