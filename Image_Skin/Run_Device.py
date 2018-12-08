@@ -76,7 +76,7 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 #Prompt user input
-user = input("Please Insert File Name: ")
+#user = input("Please Insert File Name: ")
 check = input("When device placed over skin insert 'R' to begin")
 
 if check == 'R':
