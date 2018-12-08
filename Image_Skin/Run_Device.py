@@ -5,10 +5,11 @@ import argparse
 import smbus
 import time
 import numpy as np
+'''
 from plotly import plotly
 import plotly.graph_objs as go
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-
+'''
 
 # LED strip configuration:
 LED_COUNT      = 16      # Number of LED pixels.
@@ -135,14 +136,14 @@ if check == "R":
         #Increment counter
         counter = counter + 1
     
-    '''
+    
     print("Full Spectrum")
     print(Full_Spectrum)
     print("Infared Value")
     print(Infared_Value)
     print("Visible Value")
     print(Visible_Value)
-    '''
+    
 
     for i in range(12):
         wait_ms = 50
@@ -150,7 +151,7 @@ if check == "R":
         strip.show()
         time.sleep(wait_ms/1000.0)
 
-    
+    '''    
     #Create Trace for Each Spectrum 
     trace_FS = go.Scatter(
         x = wavelengths,
@@ -187,7 +188,8 @@ if check == "R":
 
     fig = go.Figure(data=data, layout=layout)
     plot(fig, filename='Graphs/%s.html' % user)
-
+    '''
+    
 else:
     print("Error Aborting Reading")
 
