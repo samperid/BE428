@@ -134,26 +134,26 @@ if check == 'R':
         counter = counter + 1
     
     #Create Trace for Each Spectrum 
-    trace_FS = go.Scatter{
+    trace_FS = go.Scatter(
         x = wavelengths,
         y = Full_Spectrum,
         mode = 'lines+markers',
         name = 'Full Spectrum'
-    }
+    )
 
-    trace_IV = go.Scatter{
+    trace_IV = go.Scatter(
         x = wavelengths,
         y = Infared_Value,
         mode = 'lines+markers',
         name = 'Infrared Value'
-    }
+    )
 
-    trace_VS = go.Scatter{
+    trace_VS = go.Scatter(
         x = wavelengths,
         y = Visible_Value,
         mode = 'lines+markers',
         name = 'Full Spectrum'
-    }
+    )
 
     data = [trace_FS,trace_IV,trace_VS]
     
