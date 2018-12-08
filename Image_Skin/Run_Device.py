@@ -1,3 +1,4 @@
+import os
 import requests
 import time
 from neopixel import *
@@ -82,14 +83,18 @@ check = raw_input("When device placed over skin insert 'R' to begin: ")
 if check == "R":
 
     #Assign array of 15 for wavelength values, and for corresponding intensities 
-    wavelengths = np.zeros(16)
-    Full_Spectrum = np.zeros(16)
-    Infared_Value = np.zeros(16)
-    Visible_Value = np.zeros(16)
+    wavelengths = np.zeros(32)
+    Full_Spectrum = np.zeros(32)
+    Infared_Value = np.zeros(32)
+    Visible_Value = np.zeros(32)
+    #Setup text file
+    f = open("Data/file.txt","w+")
+    os.rename("Data/file.txt", "{}.txt".format(user))
 
-    for i in range(16):
-        add = i * 20
-        wavelengths[i] = 400 + add 
+    for i in range(32):
+        add = i * 10
+        wavelengths[i] = 400 + add
+        f.write("Wavlength: %i\r" % wavelengths[i]) 
     
     #Iterate through each wavelength
     counter = 0
@@ -133,6 +138,10 @@ if check == "R":
         Infared_Value[counter] = ch1
         Visible_Value[counter] = ch0-ch1
 
+        f.write(" Full_Spectrum: %f\r" % Full_Spectrum[counter]) 
+        f.write(" Infrared_Value: %f\r" % Infared_Value[counter]) 
+        f.write(" Visible_Value: %f\r\n" % Visible_Value[counter]) 
+
         #Increment counter
         counter = counter + 1
     
@@ -144,6 +153,7 @@ if check == "R":
     print("Visible Value")
     print(Visible_Value)
     
+    f.close()
 
     for i in range(12):
         wait_ms = 50
@@ -189,7 +199,7 @@ if check == "R":
     fig = go.Figure(data=data, layout=layout)
     plot(fig, filename='Graphs/%s.html' % user)
     '''
-    
+
 else:
     print("Error Aborting Reading")
 

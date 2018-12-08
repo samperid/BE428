@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from plotly import plotly
 import plotly.graph_objs as go
@@ -60,17 +61,26 @@ print("R: %i \n" % R)
 print("G: %i \n" % G)
 print("B: %i \n" % B)
 '''
-wavelengths = np.zeros(16)
 
-for i in range(16):
-    add = i * 20
+wavelengths = np.zeros(32)
+
+f = open("Data/test.txt","w+")
+
+for i in range(32):
+    add = i * 10
     wavelengths[i] = 400 + add
+    f.write("Wavlength: %i\r\n" % wavelengths[i])
+
+os.rename("Data/test.txt", "{}.txt".format("hello"))
+f.close()
 
 print(wavelengths)
 
+'''''
 for value in wavelengths:
     print(value)
     R,G,B = wavelength_to_rgb(value)
     print("R: %i \n" % R)
     print("G: %i \n" % G)
     print("B: %i \n" % B)
+'''
