@@ -79,7 +79,7 @@ strip.begin()
 #user = input("Please Insert File Name: ")
 check = input("When device placed over skin insert 'R' to begin")
 
-if check == 'R':
+if check == "R":
 
     #Assign array of 15 for wavelength values, and for corresponding intensities 
     wavelengths = np.zeros(16)
